@@ -5,15 +5,20 @@ import Burger from '../Burger';
 import Home from '../Home';
 import { useOnClickOutside } from '../../hooks/burgerHook';
 
-const MobHeader = ({ open, setOpen }) => {
+const MobHeader = ({ open, setOpen, user }) => {
   const node = React.useRef();
   useOnClickOutside(node, () => setOpen(false));
 
   return (
     <nav className={MHstyles.burger}>
       <div ref={node}>
-        <Burger open={open} setOpen={setOpen} />
-        <Home open={open} setOpen={setOpen} />
+        {user && (
+          <>
+            <Burger open={open} setOpen={setOpen} />
+            <Home open={open} setOpen={setOpen} />
+          </>
+        )}
+        {!user && <>&nbsp;</>}
       </div>
 
       <div className={MHstyles.nameContainer}>

@@ -1,14 +1,13 @@
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
-import { useWindowSize } from '../hooks/useWindowSize';
 import MainStyles from '../stylesheets/Main.module.css';
 import { motion } from 'framer-motion';
 import MobHeader from '../components/MobHeader';
-import DeskNav from '../components/DeskNav';
 import SignOut from '../components/SignOut';
 import Footer from '../components/Footer';
 import { useUser } from '../context/userContext';
 import Facebook from '../components/Facebook';
+import FBuserCard from '../components/FBuserCard';
 
 const variants = {
   visible: { opacity: 1 },
@@ -16,20 +15,6 @@ const variants = {
 }
 
 export default () => {
-  // const size = useWindowSize();
-  // let width = size.width;
-
-  const [menu, setMenu] = useState('');
-  // useEffect(() => {
-  //   if (width <= 768) {
-  //     setMenu('mobile');
-  //   } else if (width > 768) {
-  //     setMenu('desktop');
-  //   }
-
-  //   return () => { };
-  // }, [width]);
-
   const [open, setOpen] = useState(false);
 
   // Our custom hook to get context values
@@ -38,11 +23,11 @@ export default () => {
   useEffect(() => {
     if (!loadingUser) {
       // You know that the user is loaded: either logged in or out!
-      // console.log('[pages/index.js] user: ', user)
+      console.log('User: ', user)
     }
     // You also have your firebase app initialized
     // console.log('[pages/index.js] firebase: ', firebase)
-  }, [loadingUser, user])
+  }, [loadingUser, user]);
 
   return (
     <>
@@ -54,25 +39,28 @@ export default () => {
         initial="hidden"
         animate="visible"
         variants={variants}>
-        <div className={MainStyles.pageGrid}>
-          <main>
-            {!user && (
+        {!user && (
+          <main className={MainStyles.pageGrid}>
+            <MobHeader open={open} setOpen={setOpen} user={user} />
+            <Facebook />
+            <Footer />
+          </main>
+        )}
+
+        {user && (
+          <main className={MainStyles.pageGrid}>
+            <MobHeader open={open} setOpen={setOpen} user={user} />
+            {!open && (
               <>
-                <Facebook />
-                <Footer />
+                <FBuserCard user={user} />
+                <SignOut />
+                {/* <Footer /> */}
               </>
             )}
 
-            {user && (
-              <>
-                <MobHeader open={open} setOpen={setOpen} />
-                {/* {menu === 'mobile' && <MobHeader open={open} setOpen={setOpen} /> || <DeskNav />} */}
-                <SignOut />
-                <Footer />
-              </>
-            )}
+            {open && <>&nbsp;</>}
           </main>
-        </div>
+        )}
       </motion.div>
     </>
   );

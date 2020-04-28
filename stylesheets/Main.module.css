@@ -1,37 +1,13 @@
 .pageGrid {
   display: grid;
   grid-template-rows: auto 1fr auto;
-
-  min-height: 100vh;
-  /* max-width: 800px; */
+  height: calc(100vh - 3rem);
 }
 
 /* @media (min-width: 768px) {
   .pageGrid {
 
     margin: 0 auto 1.5rem auto;
-  }
-}
-
-.page {
-  max-width: 800px; */
-  /* margin: 0 1rem 1rem 1rem; */
-/* } */
-
-/* .wrapper {
-  margin: var(--obj-margin-mobile);
-  width: 288px;
-  background-color: var(--white);
-  border-radius: var(--border-radius);
-}
-@media (min-width: 640px) {
-  .wrapper {
-    width: 400px;
-  }
-}
-@media (min-width: 768px) {
-  .wrapper {
-      width: 500px;
   }
 } */
 

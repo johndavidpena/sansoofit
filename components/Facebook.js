@@ -2,22 +2,22 @@ import { useState } from 'react';
 import PageStyles from '../stylesheets/Page.module.css';
 import firebase from '../firebase/clientApp';
 
-const FBcard = props => {
-  // console.log('FBcard props: ', props);
+// const FBcard = props => {
+//   // console.log('FBcard props: ', props);
 
-  return (
-    <div className={PageStyles.FBcard}>
-      <div className={PageStyles.FBwelcome}>
-        <span>Welcome</span>
-        <span>{props.FBuser.displayName}</span>
-      </div>
+//   return (
+//     <div className={PageStyles.FBcard}>
+//       <div className={PageStyles.FBwelcome}>
+//         <span>Welcome</span>
+//         <span>{props.FBuser.displayName}</span>
+//       </div>
 
-      <div className={PageStyles.FBavatar}>
-        <img src={props.FBuser.photoURL} alt='Facebook user avatar' />
-      </div>
-    </div>
-  );
-}
+//       <div className={PageStyles.FBavatar}>
+//         <img src={props.FBuser.photoURL} alt='Facebook user avatar' />
+//       </div>
+//     </div>
+//   );
+// }
 
 const FBlogin = props => {
   // Create an instance of the Facebook provider object:
@@ -87,9 +87,7 @@ const Facebook = () => {
   const [FBuser, setFBuser] = useState('');
 
   return (
-    <>
-      {!FBuser ? <FBlogin setFBuser={setFBuser} /> : <FBcard FBuser={FBuser} />}
-    </>
+    <FBlogin setFBuser={setFBuser} />
   );
 }
 
