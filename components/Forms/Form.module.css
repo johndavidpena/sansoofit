@@ -1,0 +1,119 @@
+.container {
+  width: 250px;
+  padding: 2rem 0;
+  margin: 2rem auto;
+
+  background: rgba(0, 0, 0, 0.8);
+	text-align: center;
+}
+
+.container h1 {
+  font-size: 40px;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+  font-weight: 200;
+  color: var(--grey-050);
+}
+
+.errors {
+  font-size: var(--font-smallest);
+  color: var(--rhone-orange);
+}
+
+.form {
+  padding: 20px 0;
+}
+
+.form input,
+.form fieldset,
+.form select {
+  display: block;
+  appearance: none;
+  outline: 0;
+  border: 1px solid rgba(207, 207, 207, 1);
+  background-color: var(--grey-100);
+  width: 225px;
+
+  /* border-radius: 4px; */
+  padding: 10px 15px;
+  margin: 0 auto 10px auto;
+  font-size: 18px;
+
+  color: var(--grey-900);
+
+  transition-duration: 0.25s;
+  font-weight: 300;
+}
+
+.input::placeholder {
+  color: var(--grey-900);
+  font-weight: 300;
+}
+/* ::-webkit-input-placeholder {
+  color: var(--grey-900);
+  font-weight: 300;
+}
+::-moz-placeholder {
+  color: var(--grey-900);
+  opacity: 1;
+  font-weight: 300;
+}
+:-moz-placeholder {
+  color: var(--grey-900);
+  opacity: 1;
+  font-weight: 300;
+}
+:-ms-input-placeholder {
+  color: var(--grey-900);
+  font-weight: 300;
+} */
+
+/* .form input:hover {
+  background-color: rgba(207, 207, 207, 0.6);
+}
+
+.form input:focus {
+  background-color: white;
+  width: 250px;
+  color: var(--grey-900);
+} */
+
+.form button {
+  appearance: none;
+  outline: 0;
+  background-color: var(--rhone-orange);
+  /* border: 1px solid var(--grey-700); */
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 10px 15px;
+  color: var(--grey-050);
+  width: 225px;
+  cursor: pointer;
+  font-size: 18px;
+  transition-duration: 0.25s;
+  margin: 0 auto;
+  display: block;
+  text-decoration: none;
+}
+
+.signOutButton {
+  appearance: none;
+  outline: 0;
+  background-color: var(--rhone-orange);
+  /* border: 1px solid var(--grey-700); */
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 10px 15px;
+  color: var(--grey-050);
+  width: 225px;
+  cursor: pointer;
+  font-size: 18px;
+  transition-duration: 0.25s;
+  margin: 0 auto 5rem auto;
+  display: block;
+  text-decoration: none;
+}
+
+/* .wrapper.formSuccess .container h1 {
+	transform: translateY(85px);
+} */

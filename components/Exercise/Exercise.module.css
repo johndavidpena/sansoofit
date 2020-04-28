@@ -1,0 +1,29 @@
+.container {
+  width: 80vw;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.title {
+  background: rgba(0,0,0,0.5);
+  padding: 1rem;
+}
+
+.name {
+  font-size: 1.8rem;
+  line-height: 1;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--grey-200);
+}
+
+.symbol {
+  font-size: 1.8rem;
+  line-height: 1;
+  color: var(--rhone-orange) !important;
+}
+
+.notes {
+  font-size: var(--font-size);
+}

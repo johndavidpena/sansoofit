@@ -1,0 +1,76 @@
+/* from Form.module.css */
+/* .bb {
+  appearance: none;
+  outline: 0;
+  background-color: var(--rhone-orange);
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 10px 15px;
+  color: var(--grey-050);
+  width: 225px;
+  cursor: pointer;
+  font-size: 18px;
+  transition-duration: 0.25s;
+  margin: 0 auto;
+  display: block;
+  text-decoration: none;
+} */
+
+/* from Burger.module.css */
+.bb {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 2rem;
+  /* width: 2rem;
+  height: 2rem; */
+  color: var(--rhone-orange);
+  background: transparent;
+  /* border: none; */
+  cursor: pointer;
+  padding: 0;
+  z-index: 2;
+}
+
+.bb {
+  width: 0;
+  height: 0;
+  border-top: 1rem solid transparent;
+  border-right: 2rem solid var(--rhone-orange);
+  border-bottom: 1rem solid transparent;
+}
+
+/* https://codepen.io/FlorinPop17/pen/drJJzK */
+.bb {
+	/* background: var(--rhone-orange); */
+	/* border-radius: 50%; */
+	/* margin: 10px;
+	height: 20px;
+	width: 20px; */
+	box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+	transform: scale(1);
+	/* animation: pulse 2s infinite; */
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+		/* box-shadow: 0 0 0 0 rgba(255, 104, 34, 0.7); */
+	}
+
+	70% {
+		transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+		/* box-shadow: 0 0 0 0 rgba(255, 104, 34, 0); */
+	}
+
+	100% {
+		transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+		/* box-shadow: 0 0 0 0 rgba(255, 104, 34, 0); */
+	}
+}
