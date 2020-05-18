@@ -1,7 +1,5 @@
 import Head from 'next/head';
 import UserProvider from '../context/userContext';
-import MessengerCustomerChat from 'react-messenger-customer-chat';
-
 
 export default function MyApp({ Component, pageProps }) {
   return (
@@ -9,11 +7,6 @@ export default function MyApp({ Component, pageProps }) {
       <Head>
         <title>San Soo Fit</title>
       </Head>
-
-      <MessengerCustomerChat
-        pageId='110328800645854'
-        appId='238495870936143'
-      />
 
       <UserProvider>
         <Component {...pageProps} />
