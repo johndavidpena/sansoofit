@@ -4,10 +4,6 @@ import UserProvider from '../context/userContext';
 export default function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Head>
-        <title>San Soo Fit</title>
-      </Head>
-
       <UserProvider>
         <Component {...pageProps} />
       </UserProvider>

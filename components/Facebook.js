@@ -2,23 +2,6 @@ import { useState } from 'react';
 import PageStyles from '../stylesheets/Page.module.css';
 import firebase from '../firebase/clientApp';
 
-// const FBcard = props => {
-//   // console.log('FBcard props: ', props);
-
-//   return (
-//     <div className={PageStyles.FBcard}>
-//       <div className={PageStyles.FBwelcome}>
-//         <span>Welcome</span>
-//         <span>{props.FBuser.displayName}</span>
-//       </div>
-
-//       <div className={PageStyles.FBavatar}>
-//         <img src={props.FBuser.photoURL} alt='Facebook user avatar' />
-//       </div>
-//     </div>
-//   );
-// }
-
 const FBlogin = props => {
   // Create an instance of the Facebook provider object:
   var provider = new firebase.auth.FacebookAuthProvider();
@@ -78,7 +61,7 @@ const FBlogin = props => {
     <div className={PageStyles.facebookImage}
       onClick={() => loginWithPopup()}>
       {/* onClick={() => loginWithRedirect()}> */}
-      <img src="https://scontent-dfw5-1.xx.fbcdn.net/v/t39.2365-6/18928641_251957295286418_4362086450741641216_n.png?_nc_cat=111&amp;_nc_sid=ad8a9d&amp;_nc_ohc=v05DcUCQrIoAX9W7Ujh&amp;_nc_ht=scontent-dfw5-1.xx&amp;oh=c81840e92227c5b36f8a59ec7603049a&amp;oe=5EC2697B" alt="login with Facebook" ></img>
+      <img src='/FacebookButton.png' alt="login with Facebook" ></img>
     </div>
   );
 }
@@ -92,3 +75,20 @@ const Facebook = () => {
 }
 
 export default Facebook;
+
+// const FBcard = props => {
+//   // console.log('FBcard props: ', props);
+
+//   return (
+//     <div className={PageStyles.FBcard}>
+//       <div className={PageStyles.FBwelcome}>
+//         <span>Welcome</span>
+//         <span>{props.FBuser.displayName}</span>
+//       </div>
+
+//       <div className={PageStyles.FBavatar}>
+//         <img src={props.FBuser.photoURL} alt='Facebook user avatar' />
+//       </div>
+//     </div>
+//   );
+// }
